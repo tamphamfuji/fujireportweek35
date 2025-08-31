@@ -1,0 +1,35 @@
+
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trang có mật khẩu</title>
+  <script>
+    // Thiết lập mật khẩu ở đây:
+    const PASSWORD = "fuji6868";
+
+    function checkPassword() {
+      const input = prompt("Vui lòng nhập mật khẩu để xem nội dung:");
+      if (input === PASSWORD) {
+        // Nếu đúng thì hiển thị nội dung
+        document.getElementById("protected-content").style.display = "block";
+      } else {
+        alert("Sai mật khẩu! Bạn sẽ được chuyển hướng ra ngoài.");
+        // Hoặc bạn có thể làm window.close() nếu chạy local, hoặc redirect:
+        window.location.href = "about:blank";
+      }
+    }
+    // Khi load page, yêu cầu kiểm tra mật khẩu
+    window.onload = checkPassword;
+  </script>
+  <style>
+    /* Ẩn phần content ban đầu */
+    #protected-content { display: none; }
+  </style>
+</head>
+<body>
+  <h1>BÁO CÁO TUẦN - THÁNG FUJIFOODS</h1>
+  <div id="protected-content">
+<iframe title="FUJI FOODS - POWER BI REPORT - KINH DOANH_DS" width="1024" height="1060" src="https://app.powerbi.com/view?r=eyJrIjoiZmNjMGU3OGEtNDE4Zi00MTJmLWE2NjAtOTc4OTI3ZGFlYzg1IiwidCI6IjE4MmVkZDhiLTQ5YjgtNGFmOC1iNWU0LWY5ZWRmMDhhZTk2NyIsImMiOjEwfQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
